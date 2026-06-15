@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login Mahasiswa - SmartPresence</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body class="auth-body">
+  <section class="auth-card">
+    <div class="auth-logo">SP</div>
+    <h1>Login Mahasiswa</h1>
+    <p>Gunakan nim mahasiswa untuk mengakses sistem absensi.</p>
+    <form onsubmit="event.preventDefault(); location.href='mahasiswa-dashboard.html'">
+      
+      <input type="text" placeholder="NIM Mahasiswa" required>
+      <input type="password" placeholder="Password" required>
+      <button type="submit">Masuk sebagai Mahasiswa</button>
+    </form>
+    <a href="register-mahasiswa.html">Belum punya akun? Daftar</a>
+  </section>
+</body>
+</html>

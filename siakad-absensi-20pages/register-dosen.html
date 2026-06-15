@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register Dosen - SmartPresence</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body class="auth-body">
+  <section class="auth-card">
+    <div class="auth-logo">SP</div>
+    <h1>Register Dosen</h1>
+    <p>Gunakan nidn / nik dosen untuk mengakses sistem absensi.</p>
+    <form onsubmit="event.preventDefault(); location.href='dosen-dashboard.html'">
+      
+        <input type="text" placeholder="Nama Lengkap" required>
+        <input type="text" placeholder="Program Studi / Fakultas" required>
+    
+      <input type="text" placeholder="NIDN / NIK Dosen" required>
+      <input type="password" placeholder="Password" required>
+      <button type="submit">Daftar sebagai Dosen</button>
+    </form>
+    <a href="login-dosen.html">Sudah punya akun? Masuk</a>
+  </section>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Generate QR Absensi - SmartPresence</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="brand-logo">SP</div>
+      <div>
+        <h1>SmartPresence</h1>
+        <p>Absensi QR Kampus</p>
+      </div>
+    </div>
+    <nav>
+      <a href="dosen-dashboard.html">Dashboard</a>
+      <a href="dosen-jadwal.html">Jadwal</a>
+      <a href="dosen-generate-qr.html">Generate QR</a>
+      <a href="dosen-daftar-kehadiran.html">Kehadiran</a>
+      <a href="dosen-profil.html">Profil</a>
+    </nav>
+    <a class="logout" href="index.html">Keluar</a>
+  </aside>
+  <main class="main">
+
+    <div class="topbar"><div><h2>Generate QR Absensi</h2><p>Buat QR dinamis untuk satu sesi perkuliahan.</p></div><a class="btn ghost" href="dosen-monitoring.html">Lihat Monitoring</a></div>
+    <section class="qr-layout">
+      <div class="card">
+        <h3>Pengaturan Sesi</h3>
+        <label>Mata Kuliah</label><select><option>Pemrograman Web Lanjut</option><option>Basis Data</option></select>
+        <label>Kelas</label><select><option>TI-04</option><option>TI-05</option></select>
+        <label>Durasi QR</label><select id="qrDuration"><option value="300">5 Menit</option><option value="600">10 Menit</option><option value="900">15 Menit</option></select>
+        <button class="btn primary full" onclick="generateQR()">Generate QR</button>
+      </div>
+      <div class="card qr-card">
+        <h3>QR Aktif</h3>
+        <div class="qr-fake" id="qrFake">QR</div>
+        <p class="code" id="qrCodeText">WEB-A2-09XQ</p>
+        <div class="timer" id="qrTimer">05:00</div>
+        <div class="button-row"><button class="btn ghost" onclick="generateQR()">Refresh QR</button><button class="btn danger">Tutup Absensi</button></div>
+      </div>
+    </section>
+
+  </main>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
